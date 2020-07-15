@@ -568,19 +568,19 @@ func (app *App) DeleteTokenHandler(
 	r.ParseForm()
 	params := r.Form
 	userID := params.Get("id")
-	
-    if r.URL.Path == "/delete" {
-        // Read cookie
-        cookie, err := r.Cookie("refreshtoken")
-        if err == nil {
-            refreshToken, err = decode_b64(cookie.Value)
-            if err != nil {
-                write_and_log_err(w, 500, err, "TOKEN PAIRS HANDLER")
-                return
-            }
 
-        }
-    }
+	if r.URL.Path == "/delete" {
+		// Read cookie
+		cookie, err := r.Cookie("refreshtoken")
+		if err == nil {
+			refreshToken, err = decode_b64(cookie.Value)
+			if err != nil {
+				write_and_log_err(w, 500, err, "TOKEN PAIRS HANDLER")
+				return
+			}
+
+		}
+	}
 	ctx := context.TODO()
 	result, status, err = app.DeleteTokens(ctx, userID, refreshToken)
 	if err != nil {
@@ -658,7 +658,6 @@ func main() {
 		if PORT == "" {
 			PORT = "3001"
 		}
-		SERVER = os.Getenv("SERVER_URL")
 	}
 
 	if SERVER == "" {
