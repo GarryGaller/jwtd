@@ -1,0 +1,13 @@
+# exclude these types of files
+*.cmd
+*.bat
+*.pdf
+*.txt
+*.exe
+*.cookie
+
+bin/
+vendor/
+
+
+
