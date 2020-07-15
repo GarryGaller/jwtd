@@ -653,7 +653,10 @@ func main() {
 
 	flag.Parse()
 
-	if *portNum == "" {
+	PORT = *portNum
+	SERVER = *serverAddr
+
+	if PORT == "" {
 		PORT = os.Getenv("PORT")
 		if PORT == "" {
 			PORT = "3001"
@@ -661,7 +664,7 @@ func main() {
 		SERVER = os.Getenv("SERVER_URL")
 	}
 
-	if *serverAddr == "" {
+	if SERVER == "" {
 		SERVER = os.Getenv("SERVER_URL")
 	}
 
