@@ -637,7 +637,7 @@ func (app *App) Serve() {
 
 func main() {
     var err error
-    runOnAddr := flag.String("run-on-addr",":3001", "ip/сервер и порт запуска приложения")
+    runOnAddr := flag.String("run-on-addr",":5000", "ip/сервер и порт запуска приложения")
     mongoOnAddr := flag.String("mongo-on-addr",":27017", "ip/сервер и порт запуска MongoDB")
     userDB := flag.String("db-user", "admin", "Имя пользователя БД")
     defaultDB := flag.String("db-name", "test", "Имя базы данных")
