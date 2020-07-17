@@ -641,7 +641,7 @@ func main() {
 
     serverAddr := flag.String("server", "", "Адрес с которого приложение будет принимать запросы")
     portNum := flag.String("port", "", "Порт, который приложение будет слушать")
-    mongoOnAddr := flag.String("mongo-on-addr", ":27017", "ip/сервер и порт запуска MongoDB")
+    mongoOnAddr := flag.String("mongo-on-addr", "localhost:27017", "ip/сервер и порт запуска MongoDB")
     adminDB := flag.String("db-admin", "", "Имя администратора  БД")
     adminPwdDB := flag.String("db-admin-pwd", "", "Пароль администратора БД")
     userDB := flag.String("db-user", "test", "Имя пользователя")
