@@ -6,14 +6,18 @@ Json Web Tokens authentication server
 Usage of jwtd:
   -access-ttl int
         Время жизни (в сек.)  access токена (default 3600)
+  -db string
+        Имя базы данных для подключения (default "testdb")
+  -db-admin string
+        Имя администратора  БД
+  -db-admin-pwd string
+        Пароль администратора БД
   -db-collection string
         Имя таблицы(коллекции) (default "users")
-  -db-name string
-        Имя базы данных (default "test")
-  -db-password string
-        Пароль пользователя БД (default "admin")
   -db-user string
-        Имя пользователя БД (default "admin")
+        Имя пользователя (default "test")
+  -db-user-pwd string
+        Пароль пользователя для подключения (default "test")
   -mongo-on-addr string
         ip/сервер и порт запуска MongoDB (default ":27017")
   -port string
